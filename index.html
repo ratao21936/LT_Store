@@ -6,13 +6,12 @@
     <script>
       window.onload = function () {
         const jobId = new URLSearchParams(window.location.search).get("jobId");
-        const placeId = "109983668079237"; // <-- coloque aqui seu placeId fixo
-
+        const placeId = "109983668079237"; // ID fixo do seu jogo
         if (jobId) {
           const robloxUrl = `roblox://placeID=${placeId}&gameInstanceId=${jobId}`;
           window.location.href = robloxUrl;
         } else {
-          document.body.innerHTML = "<h2>JobId inválido!</h2>";
+          document.body.innerHTML = "<h2>JobId inválido ou ausente!</h2>";
         }
       };
     </script>
