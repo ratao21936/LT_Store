@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conectando ao servidor Roblox...</title>
+    <script>
+      window.onload = function () {
+        const jobId = new URLSearchParams(window.location.search).get("jobId");
+        const placeId = "109983668079237"; // <-- coloque aqui seu placeId fixo
+
+        if (jobId) {
+          const robloxUrl = `roblox://placeID=${placeId}&gameInstanceId=${jobId}`;
+          window.location.href = robloxUrl;
+        } else {
+          document.body.innerHTML = "<h2>JobId inválido!</h2>";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <h2>Redirecionando para o servidor do Roblox...</h2>
+  </body>
+</html>
